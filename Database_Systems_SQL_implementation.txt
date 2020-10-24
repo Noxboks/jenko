@@ -1,0 +1,97 @@
+CREATE TABLE Device
+(
+deviceCatalogId INT(10) AUTO_INCREMENT,
+deviceCatalogName VARCHAR(50) UNIQUE NOT NULL,
+deviceDescrip VARCHAR(80) NOT NULL,
+availabilityStatus VARCHAR(50) NOT NULL,
+constraint d_dcid_pk PRIMARY KEY(deviceCatalogId)
+)
+Engine=InnoDB
+
+CREATE TABLE Visual_Device
+(
+deviceCatalogId INT(10) NOT NULL,
+frameFlag VARCHAR(1),
+frBrand VARCHAR(50),
+frModel VARCHAR(50),
+lensFlag VARCHAR(1),
+lensSerialNb VARCHAR(20),
+lensVisionType VARCHAR(50),
+lensTint VARCHAR(20),
+lensThinessLevel VARCHAR(20),
+constraint vd_dcid_pk PRIMARY KEY(deviceCatalogId),
+constraint vd_dcid_fk FOREIGN KEY(deviceCatalogId)
+references Device(deviceCatalogId)
+)
+
+CREATE TABLE Hearing_Device
+(
+deviceCatalogId INT(10) NOT NULL,
+hdMake VARCHAR(20),
+hdModel VARCHAR(20) NOT NULL,
+constraint hd_dcid_pk PRIMARY KEY(deviceCatalogId),
+constraint hd_dcid_fk FOREIGN KEY(deviceCatalogId)
+references Device(deviceCatalogId)
+)
+
+// To retrieve the ‘deviceCatalogId’ in the following part, we assume that two
+product can not have the same ‘deviceCatalogName’.
+INSERT INTO
+Device(deviceCatalogName, deviceDescrip,
+availabilityStatus)
+VALUES(
+"Emporio Armani Ultra-Light frame",
+"Brand new grey and blue ultra-light frame, latest trend in 2019",
+"in stock"
+)
+INSERT INTO
+Device(deviceCatalogName, deviceDescrip,
+availabilityStatus)
+VALUES (
+"Optimo Single Vision Lens",
+"Optimal single lens, 2020 style, anti-scratch and anti-shock",
+"in stock"
+)
+INSERT INTO
+Device(deviceCatalogName, deviceDescrip,
+availabilityStatus)
+VALUES (
+"Phono Titanium Digital Hearing Aid",
+"Ultra-sensitive digital hearing aid, adjustable through an App",
+"currently being ordered"
+)
+
+INSERT INTO
+Visual_Device(deviceCatalogId, frameFlag,
+frBrand, frModel)
+VALUES (
+(SELECT deviceCatalogId FROM `Device` WHERE
+deviceCatalogName = "Emporio Armani Ultra-Light frame"),
+"F",
+"Emporio Armani",
+"Empo324"
+)
+
+INSERT INTO
+Visual_Device (deviceCatalogId, lensflag,
+lensSerialNb, lensVisionType, lensTint,
+lensThinessLevel)
+VALUES (
+(SELECT deviceCatalogId FROM `Device` WHERE
+deviceCatalogName = "Optimo Single Vision Lens"),
+"L",
+"opto456321987",
+"Single vision for short-sightedness",
+"clear",
+"ultra-thin"
+)
+
+INSERT INTO
+Hearing_Device(deviceCatalogId, hdMake,
+hdModel)
+VALUES (
+(SELECT deviceCatalogId FROM `Device` WHERE
+deviceCatalogName = "Phono Titanium Digital Hearing Aid"),
+"Phono Titanium",
+"phono2021"
+)
