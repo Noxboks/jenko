@@ -1,0 +1,301 @@
+*--------------------------------------------------------------------------------------------------------------------------*
+|						VALIDATION MODE ACTIVE						           |
+*--------------------------------------------------------------------------------------------------------------------------*
+|						Menu Input Validation:						           |
+*--------------------------------------------------------------------------------------------------------------------------*
+|     INPUT:    | EXPTECTED OUTPUT                              | ACTUAL OUTPUT:                                | PASS/FAIL|
+*---------------|-----------------------------------------------|-----------------------------------------------|----------*
+qsdf798645 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+XWCVB		| Please enter a valid option 			| Please enter a valid option 			| Pass
+>< 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+> 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+a 		| Please enter the type...    			| Please enter the type...    			| Pass
+k 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+c 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+Q 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+G 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+159 		| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+97845123 	| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+-5 		| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+-789 		| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+-987465 	| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+-987465 	| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+645.89764 	| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+1.97864 	| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+1.97864 	| Please enter a valid option 			| ERROR InputMismatchException 			| Fail
+*--------------------------------------------------------------------------------------------------------------------------*
+|						Add vehicle input validation:   				           |
+*--------------------------------------------------------------------------------------------------------------------------*
+Add 49 vehicles	| Menu display			 		| Menu display			 		| Pass
+Add 50 vehicles	| Menu display			 		| Menu display			 		| Pass
+Add 51 vehicles	| You have reached the max + Menu display	| Menu display					| Fail
+qsdf798645 	| Please enter a correct option 		| Please enter a correct option 		| Pass
+XWCVB 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+/> 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+a 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+k 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+c 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+Q 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+G 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+97845123 	| Please enter a correct option 		| ERROR InputMismatchException  		| Fail
+-5 		| Please enter a correct option 		| ERROR InputMismatchException  		| Fail
+-789 		| Please enter a correct option 		| ERROR InputMismatchException  		| Fail
+*--------------------------------------------------------------------------------------------------------------------------*
+|						   Vehicle make validation:   	         			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+Ford	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+AZE	 	| is not a valid car maker			| is a valid car maker				| Fail
+Toyota	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+vfe	 	| is not a valid car maker			| is a valid car maker				| Fail
+798465	 	| is not a valid car maker			| is a valid car maker				| Fail
+Honda	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+OFJE	 	| is not a valid car maker			| is a valid car maker				| Fail
+Mazda	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Vehicle plate number validation:          			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+AB51ABC 	| is a valid car number plate				| is a valid number plate 			| PASS
+E0mVXyXWFD 	| is not a valid car number plate 			| is a valid number plate 			| Fail
+15vcawuEN9 	| is not a valid car number plate 			| is a valid number plate 			| Fail
+IBmrLWeBSW 	| is not a valid car number plate 			| is a valid number plate 			| Fail
+1 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+-85 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+0.265 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+-978.867 	| is not a valid car number plate 			| is a valid number plate 			| Fail
+/// 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+/ 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+>< 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+> 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+5( 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+JK12QSD 	| is not a valid car number plate 			| is a valid number plate 			| Fail
+Car 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+true 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+£¨µ%£¨£¨9° 	| is not a valid car number plate 			| is a valid number plate 			| Fail
+q 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+a 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+,;/! 		| is not a valid car number plate 			| is a valid number plate 			| Fail
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Car test input validation:                 			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+|					        Type input validation:                   			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+E0mVXy 		| The input is INVALID 				| The input is valid 				| Fail
+15vcEN 		| The input is INVALID 				| The input is valid 				| Fail
+IBmrLW 		| The input is INVALID 				| The input is valid 				| Fail
+1 		| The input is INVALID 				| The input is valid 				| Fail
+-85 		| The input is INVALID 				| The input is valid 				| Fail
+0.265 		| The input is INVALID 				| The input is valid 				| Fail
+-978.8 		| The input is INVALID 				| The input is valid 				| Fail
+/// 		| The input is INVALID 				| The input is valid 				| Fail
+/ 		| The input is INVALID 				| The input is valid 				| Fail
+>< 		| The input is INVALID 				| The input is valid 				| Fail
+> 		| The input is INVALID 				| The input is valid 				| Fail
+5( 		| The input is INVALID 				| The input is valid 				| Fail
+Car 		| The input is valid 				| The input is valid 				| PASS
+true 		| The input is INVALID 				| The input is valid 				| Fail
+£¨µ%9° 		| The input is INVALID 				| The input is valid  				| Fail
+q 		| The input is INVALID 				| The input is valid  				| Fail
+a 		| The input is INVALID 				| The input is valid  				| Fail
+,;/! 		| The input is INVALID 				| The input is valid  				| Fail
+32079 		| The input is valid 				| The input is valid 				| PASS
+1990 		| The input is valid 				| The input is valid 				| PASS
+789 		| The input is valid 				| The input is valid 				| PASS
+2003 		| The input is valid 				| The input is valid 				| PASS
+2005 		| The input is valid 				| The input is valid 				| PASS
+549427 		| The input is INVALID 				| The input is valid  				| Fail
+34188 		| The input is valid 				| The input is valid 				| PASS
+288624 		| The input is INVALID 				| The input is valid  				| Fail
+686253 		| The input is INVALID 				| The input is valid  				| Fail
+61356 		| The input is valid 				| The input is valid 				| PASS
+2010 		| The input is valid 				| The input is valid 				| PASS
+26695 		| The input is valid 				| The input is valid 				| PASS
+963213 		| The input is INVALID 				| The input is valid  				| Fail
+845740 		| The input is INVALID 				| The input is valid  				| Fail
+766064 		| The input is INVALID 				| The input is valid  				| Fail
+32079 		| The input is INVALID 				| The input is valid  				| Fail
+1990 		| The input is valid 				| The input is valid 				| PASS
+789 		| The input is INVALID 				| The input is valid  				| Fail
+2003 		| The input is valid 				| The input is valid 				| PASS
+2005 		| The input is valid 				| The input is valid 				| PASS
+549427 		| The input is INVALID 				| The input is valid  				| Fail
+34188 		| The input is INVALID 				| The input is valid  				| Fail
+288624 		| The input is INVALID 				| The input is valid  				| Fail
+686253 		| The input is INVALID 				| The input is valid  				| Fail
+61356 		| The input is INVALID 				| The input is valid  				| Fail
+2010 		| The input is valid 				| The input is valid 				| PASS
+26695 		| The input is INVALID 				| The input is valid  				| Fail
+963213 		| The input is INVALID 				| The input is valid  				| Fail
+845740 		| The input is INVALID 				| The input is valid  				| Fail
+766064 		| The input is INVALID 				| The input is valid  				| Fail
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Delete vehicle input validation:                 			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+qsdf798645 	| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+XWCVB 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+*/ 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+a 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+k 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+c 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+Q 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+G 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+159 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+97845123 	| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+-5 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+-789 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+-987465 	| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+1 		| The vehicule selected will be deleted  	| The vehicule selected will be deleted  	| Pass
+AFTER CORRECTION OF THE CODE
+*--------------------------------------------------------------------------------------------------------------------------*
+|						VALIDATION MODE ACTIVE						           |
+*--------------------------------------------------------------------------------------------------------------------------*
+|						Menu Input Validation:						           |
+*--------------------------------------------------------------------------------------------------------------------------*
+|     INPUT:    | EXPTECTED OUTPUT                              | ACTUAL OUTPUT:                                | PASS/FAIL|
+*---------------|-----------------------------------------------|-----------------------------------------------|----------*
+qsdf798645 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+XWCVB		| Please enter a valid option 			| Please enter a valid option 			| Pass
+>< 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+> 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+a 		| Please enter the type...    			| Please enter the type...    			| Pass
+k 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+c 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+Q 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+G 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+159 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+97845123 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+-5 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+-789 		| Please enter a valid option 			| Please enter a valid option 			| Pass
+-987465 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+-987465 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+645.89764 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+1.97864 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+1.97864 	| Please enter a valid option 			| Please enter a valid option 			| Pass
+*--------------------------------------------------------------------------------------------------------------------------*
+|						Add vehicle input validation:   				           |
+*--------------------------------------------------------------------------------------------------------------------------*
+Add 49 vehicles	| Menu display			 		| Menu display			 		| Pass
+Add 50 vehicles	| Menu display			 		| Menu display			 		| Pass
+Add 51 vehicles	| You have reached the mac + Menu display	| You have reached the mac + Menu display	| Pass
+qsdf798645 	| Please enter a correct option 		| Please enter a correct option 		| Pass
+XWCVB 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+/> 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+a 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+k 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+c 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+Q 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+G 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+97845123 	| Please enter a correct option 		| Please enter a correct option 		| Pass
+-5 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+-789 		| Please enter a correct option 		| Please enter a correct option 		| Pass
+*--------------------------------------------------------------------------------------------------------------------------*
+|						   Vehicle make validation:   	         			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+Ford	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+AZE	 	| is not a valid car maker			| is not a valid car maker			| PASS
+Toyota	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+vfe	 	| is not a valid car maker			| is not a valid car maker			| PASS
+798465	 	| is not a valid car maker			| is not a valid car maker			| PASS
+Honda	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+OFJE	 	| is not a valid car maker			| is not a valid car maker			| PASS
+Mazda	 	| is a valid car maker	 			| is a valid car maker    			| PASS
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Vehicle plate number validation:          			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+AB51ABC 	| is a valid number plate 			| is a valid number plate 			| PASS
+E0mVXyXWFD 	| is not a valid number plate			| is not a valid number plate 			| PASS
+15vcawuEN9 	| is not a valid number plate 			| is not a valid number plate 			| PASS
+IBmrLWeBSW 	| is not a valid number plate 			| is not a valid number plate 			| PASS
+1 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+-85 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+0.265 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+-978.867 	| is not a valid number plate 			| is not a valid number plate 			| PASS
+/// 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+/ 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+>< 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+> 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+5( 		| is not a valid number plate 			| is not a valid number plate 			| PASS
+JK12QSD 	| is a valid car number plate 			| is a valid number plate 			| PASS
+Car 		| is not a valid car number plate		| is not a valid number plate 			| PASS
+true 		| is not a valid car number plate 		| is not a valid number plate 			| PASS
+£¨µ%£¨£¨9° 	| is not a valid car number plate		| is not a valid number plate 			| PASS
+q 		| is not a valid car number plate		| is not a valid number plate 			| PASS
+a 		| is not a valid car number plate		| is not a valid number plate 			| PASS
+,;/! 		| is not a valid car number plate		| is not a valid number plate 			| PASS
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Car test input validation:                 			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+|					        Type input validation:                   			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+E0mVXy 		| The input is INVALID 				| The input is INVALID 				| PASS
+15vcEN 		| The input is INVALID 				| The input is INVALID 				| PASS
+IBmrLW 		| The input is INVALID 				| The input is INVALID 				| PASS
+1 		| The input is INVALID 				| The input is INVALID 				| PASS
+-85 		| The input is INVALID 				| The input is INVALID 				| PASS
+0.265 		| The input is INVALID 				| The input is INVALID 				| PASS
+-978.8 		| The input is INVALID 				| The input is INVALID 				| PASS
+/// 		| The input is INVALID 				| The input is INVALID 				| PASS
+/ 		| The input is INVALID 				| The input is INVALID 				| PASS
+>< 		| The input is INVALID 				| The input is INVALID 				| PASS
+> 		| The input is INVALID 				| The input is INVALID 				| PASS
+5( 		| The input is INVALID 				| The input is INVALID 				| PASS
+Car 		| The input is valid 				| The input is valid 				| PASS
+true 		| The input is INVALID 				| The input is INVALID 				| PASS
+£¨µ%9° 		| The input is INVALID 				| The input is INVALID 				| PASS
+q 		| The input is INVALID 				| The input is INVALID 				| PASS
+a 		| The input is INVALID 				| The input is INVALID 				| PASS
+,;/! 		| The input is INVALID 				| The input is INVALID 				| PASS
+32079 		| The input is valid 				| The input is valid 				| PASS
+1990 		| The input is valid 				| The input is valid 				| PASS
+789 		| The input is valid 				| The input is valid 				| PASS
+2003 		| The input is valid 				| The input is valid 				| PASS
+2005 		| The input is valid 				| The input is valid 				| PASS
+549427 		| The input is INVALID 				| The input is INVALID 				| PASS
+34188 		| The input is valid 				| The input is valid 				| PASS
+288624 		| The input is INVALID 				| The input is INVALID 				| PASS
+686253 		| The input is INVALID 				| The input is INVALID 				| PASS
+61356 		| The input is valid 				| The input is valid 				| PASS
+2010 		| The input is valid 				| The input is valid 				| PASS
+26695 		| The input is valid 				| The input is valid 				| PASS
+963213 		| The input is INVALID 				| The input is INVALID 				| PASS
+845740 		| The input is INVALID 				| The input is INVALID 				| PASS
+766064 		| The input is INVALID 				| The input is INVALID 				| PASS
+32079 		| The input is INVALID 				| The input is INVALID 				| PASS
+1990 		| The input is valid 				| The input is valid 				| PASS
+789 		| The input is INVALID 				| The input is INVALID 				| PASS
+2003 		| The input is valid 				| The input is valid 				| PASS
+2005 		| The input is valid 				| The input is valid 				| PASS
+549427 		| The input is INVALID 				| The input is INVALID 				| PASS
+34188 		| The input is INVALID 				| The input is INVALID 				| PASS
+288624 		| The input is INVALID 				| The input is INVALID 				| PASS
+686253 		| The input is INVALID 				| The input is INVALID 				| PASS
+61356 		| The input is INVALID 				| The input is INVALID 				| PASS
+2010 		| The input is valid 				| The input is valid 				| PASS
+26695 		| The input is INVALID 				| The input is INVALID 				| PASS
+963213 		| The input is INVALID 				| The input is INVALID 				| PASS
+845740 		| The input is INVALID 				| The input is INVALID 				| PASS
+766064 		| The input is INVALID 				| The input is INVALID 				| PASS
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Delete vehicle input validation:                 			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+qsdf798645 	| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+XWCVB 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+*/ 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+a 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+k 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+c 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+Q 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+G 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+159 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+97845123 	| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+-5 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+-789 		| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+-987465 	| Please enter a valid vehicle to delete 	| Please enter a valid vehicle to delete 	| Pass
+1 		| The vehicule selected will be deleted  	| The vehicule selected will be deleted  	| Pass
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Print vehicle input validation:                 			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+Vehicle		| Print vehicle 				| Print vehicle  				| Pass
+*--------------------------------------------------------------------------------------------------------------------------*
+|					      Sort vehicle input validation:                 			           |
+*--------------------------------------------------------------------------------------------------------------------------*
+VehToy&VehChev  | Print Chevrolet then Toyota 			| Print Chevrolet then Toyota			| Pass
