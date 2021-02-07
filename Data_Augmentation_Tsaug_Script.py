@@ -1,14 +1,9 @@
-import numpy as np
-from tsaug.visualization import plot
 from tsaug import TimeWarp, Crop, Quantize, Drift, Reverse
 from pandas import read_csv, DataFrame
-from matplotlib import pyplot
 
-dataset = read_csv('CLEANED_ECX_EUA_Future_DT_2008_to_2021.csv', delimiter=",", engine='python')
+dataset = read_csv('CLEANED_ECX_EUA_.csv', delimiter=",", engine='python')
 dataset.columns=['Date','Open','High','Low','Settle','Change','CloseToPredict']
 dataset = dataset.drop(columns=['Date', 'Change', 'CloseToPredict'])
-
-# X = np.load('CLEANED_ECX_EUA_Future_DT_2008_to_2021.csv', allow_pickle=True)
 
 X = dataset.to_numpy()
 X = X.reshape(len(dataset.columns), len(dataset))
@@ -32,4 +27,4 @@ test = X_aug.reshape(-1, 4)
 new = DataFrame(test)
 print(new)
 
-new.to_csv("SYNTHETIC_DATA_SAMPLE_3K_10.csv", index=False, header=False)
+new.to_csv("SYNTHETIC_DATA_3K_SAMPLE.csv", index=False, header=False)
